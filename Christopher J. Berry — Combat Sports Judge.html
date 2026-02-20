@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///Users/chrisberry/Downloads/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christopher J. Berry — Combat Sports Judge</title>
+<meta name="description" content="Christopher J. Berry — Licensed Attorney, BJJ Purple Belt, and Combat Sports Judge for Boxing, MMA &amp; Kickboxing events.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./Christopher J. Berry — Combat Sports Judge_files/css2" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0d0d0d;
+    --red: #c0272d;
+    --gold: #b8952a;
+    --light: #f5f2ed;
+    --mid: #e8e3da;
+    --muted: #7a7060;
+    --sidebar: #edeae2;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: #1a1a1a;
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--ink);
+    border-bottom: 3px solid var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 54px;
+  }
+
+  .nav-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: white;
+  }
+
+  .nav-brand span { color: var(--red); }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* hamburger for mobile */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px; height: 2px;
+    background: #aaa;
+    border-radius: 2px;
+    transition: 0.2s;
+  }
+
+  .mobile-menu {
+    display: none;
+    background: #111;
+    border-bottom: 2px solid var(--red);
+    padding: 16px 24px;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .mobile-menu a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #aaa;
+    text-decoration: none;
+  }
+  .mobile-menu.open { display: flex; }
+
+  /* ─── PAGE WRAPPER ─── */
+  .page {
+    max-width: 980px;
+    margin: 0 auto;
+    background: var(--light);
+    box-shadow: 0 0 80px rgba(0,0,0,0.6);
+  }
+
+  /* ─── HEADER ─── */
+  .header {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    background: var(--ink);
+    min-height: 240px;
+  }
+
+  .photo-col {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(15%) contrast(1.05);
+  }
+
+  .photo-accent {
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 5px;
+    background: var(--red);
+  }
+
+  .header-text {
+    padding: 32px 40px 28px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .title-tag {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+    letter-spacing: 3px;
+    color: #fff;
+    line-height: 1;
+  }
+  .name span { color: var(--red); }
+
+  .contact-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+
+  .contact-item {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-item:hover { color: var(--gold); }
+  .contact-item .dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--red);
+    flex-shrink: 0;
+  }
+
+  /* ─── GRADIENT RULE ─── */
+  .rule {
+    height: 5px;
+    background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%);
+  }
+
+  /* ─── BODY GRID ─── */
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 270px;
+  }
+
+  .main-col {
+    padding: 36px 40px 44px 40px;
+    border-right: 1px solid var(--mid);
+  }
+
+  .side-col {
+    padding: 36px 28px 44px 28px;
+    background: var(--sidebar);
+  }
+
+  /* ─── SECTIONS ─── */
+  .section { margin-bottom: 30px; }
+
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--mid);
+  }
+
+  .profile-text {
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: #2a2a2a;
+    font-weight: 300;
+  }
+
+  /* ─── JUDGING TABLE ─── */
+  .judging-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .judging-table thead tr { background: var(--ink); }
+
+  .judging-table thead th {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 10.5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ccc;
+    padding: 8px 10px;
+    text-align: left;
+  }
+
+  .judging-table tbody tr {
+    border-bottom: 1px solid var(--mid);
+    transition: background 0.15s;
+  }
+  .judging-table tbody tr:hover { background: #ede9df; }
+  .judging-table tbody tr:last-child { border-bottom: none; }
+
+  .judging-table td {
+    padding: 9px 10px;
+    color: #2a2a2a;
+    font-size: 13.5px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .judging-table td.date {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .judging-table td.sport {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .judging-table td a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--mid);
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .judging-table td a:hover { color: var(--red); border-color: var(--red); }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .badge-official { background: var(--red); color: white; }
+  .badge-alt { background: var(--mid); color: var(--muted); }
+  .badge-loading { background: #ddd; color: #999; animation: pulse 1.2s ease-in-out infinite; }
+
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  .table-note {
+    font-size: 12px;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 9px;
+  }
+  .table-note a { color: var(--red); }
+
+  /* ─── CREDENTIALS ─── */
+  .cred-item {
+    display: flex;
+    gap: 11px;
+    margin-bottom: 11px;
+    align-items: flex-start;
+  }
+
+  .cred-bullet {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--red);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .cred-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #2a2a2a;
+  }
+  .cred-text strong { font-weight: 600; }
+
+  /* ─── CALLOUT ─── */
+  .callout {
+    background: var(--ink);
+    color: white;
+    padding: 18px 22px 18px 48px;
+    margin-top: 10px;
+    position: relative;
+  }
+  .callout::before {
+    content: '"';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 90px;
+    color: var(--red);
+    line-height: 0;
+    position: absolute;
+    top: 40px; left: 14px;
+    opacity: 0.55;
+  }
+  .callout-text {
+    font-size: 14px;
+    line-height: 1.7;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* ─── SIDEBAR SKILLS (tags instead of bars) ─── */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 2px;
+  }
+
+  .tag {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11.5px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border: 1px solid var(--red);
+    color: var(--ink);
+    border-radius: 2px;
+  }
+
+  /* ─── JUDGING CRITERIA ─── */
+  .criteria-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .criteria-list li {
+    font-size: 13px;
+    font-weight: 300;
+    color: #2a2a2a;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .criteria-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-size: 11px;
+    top: 2px;
+  }
+
+  /* ─── STAT BLOCKS ─── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 2px;
+  }
+
+  .stat-box {
+    background: var(--ink);
+    padding: 14px 12px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--red);
+    line-height: 1;
+    display: block;
+  }
+
+  .stat-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-top: 3px;
+    display: block;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--ink);
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-note {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10.5px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #666;
+    text-transform: uppercase;
+  }
+
+  .footer-mark {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--red);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 760px) {
+    nav { padding: 0 18px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    .header {
+      grid-template-columns: 1fr;
+    }
+    .photo-col {
+      height: 260px;
+    }
+    .photo-accent { display: none; }
+    .header-text {
+      padding: 24px 22px 22px 22px;
+    }
+    .name { font-size: 46px; }
+    .contact-row { gap: 14px; }
+
+    .body {
+      grid-template-columns: 1fr;
+    }
+    .main-col {
+      padding: 28px 22px 32px 22px;
+      border-right: none;
+      border-bottom: 1px solid var(--mid);
+    }
+    .side-col {
+      padding: 28px 22px 32px 22px;
+    }
+
+    .judging-table td, .judging-table th {
+      padding: 7px 7px;
+      font-size: 12px;
+    }
+
+    footer {
+      padding: 14px 22px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .stat-row { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    .name { font-size: 38px; }
+    .judging-table thead { display: none; }
+    .judging-table td { display: block; }
+    .judging-table td.date { padding-bottom: 2px; }
+    .judging-table tr { border-bottom: 1px solid var(--mid); padding: 6px 0; display: block; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">C<span>.</span>J<span>.</span>Berry</div>
+  <ul class="nav-links">
+    <li><a href="file:///Users/chrisberry/Downloads/index.html#profile">Profile</a></li>
+    <li><a href="file:///Users/chrisberry/Downloads/index.html#judging">Judging Record</a></li>
+    <li><a href="file:///Users/chrisberry/Downloads/index.html#credentials">Credentials</a></li>
+    <li><a href="file:///Users/chrisberry/Downloads/index.html#martial-arts">Martial Arts</a></li>
+    <li><a href="file:///Users/chrisberry/Downloads/index.html#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="file:///Users/chrisberry/Downloads/index.html#profile" onclick="closeMenu()">Profile</a>
+  <a href="file:///Users/chrisberry/Downloads/index.html#judging" onclick="closeMenu()">Judging Record</a>
+  <a href="file:///Users/chrisberry/Downloads/index.html#credentials" onclick="closeMenu()">Credentials</a>
+  <a href="file:///Users/chrisberry/Downloads/index.html#martial-arts" onclick="closeMenu()">Martial Arts</a>
+  <a href="file:///Users/chrisberry/Downloads/index.html#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="photo-col">
+      <img src="./Christopher J. Berry — Combat Sports Judge_files/headshot-chris-berry.png" alt="Christopher J. Berry">
+      <div class="photo-accent"></div>
+    </div>
+    <div class="header-text">
+      <div class="title-tag">Combat Sports Judge &nbsp;·&nbsp; Boxing &amp; MMA &amp; Kickboxing</div>
+      <div class="name">Christopher<br><span>J. Berry</span></div>
+      <div class="contact-row" id="contact">
+        <a class="contact-item" href="tel:2487674784"><div class="dot"></div>248-767-4784</a>
+        <a class="contact-item" href="mailto:chrisjberry44@gmail.com"><div class="dot"></div>chrisjberry44@gmail.com</a>
+        <a class="contact-item" href="https://docs.google.com/spreadsheets/d/1-f-trYbJUcjQpHJx-90Pv3A4IOv9UcSQWF8Fgdjwxg8" target="_blank"><div class="dot"></div>View Full Record</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- MAIN LEFT COLUMN -->
+    <div class="main-col">
+
+      <div class="section" id="profile">
+        <div class="section-label">Profile</div>
+        <p class="profile-text">
+          Attorney and seasoned combat sports practitioner with over 15 years as a dedicated student of boxing and MMA. A BJJ purple belt with 11 years of active mat time and a grappling partner to UFC fighters across all weight classes — from Heavyweight to Strawweight — combining elite-level practitioner knowledge with the analytical precision demanded by the legal profession. Committed to the integrity of judging and the promotion of fair competition in the combat sports arena.
+        </p>
+      </div>
+
+      <div class="section" id="judging">
+        <div class="section-label">Judging Record</div>
+        <table class="judging-table" id="judgingTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Event</th>
+              <th>Sport</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="judgingBody">
+            <!-- Static fallback, replaced by JS if fetch succeeds -->
+            <tr>
+              <td class="date">Feb 20, 2026</td>
+              <td><a href="https://www.tapology.com/fightcenter/events/138181-motor-city-cagefights-23" target="_blank">Motor City Cagefights 23</a></td>
+              <td class="sport">MMA</td>
+              <td><span class="badge badge-official">Official · Paid</span></td>
+            </tr>
+            <tr>
+              <td class="date">Dec 28, 2025</td>
+              <td><a href="https://www.tapology.com/fightcenter/events/135950-clip-knockout-series" target="_blank">Clip Knockout Series</a></td>
+              <td class="sport">Boxing / Kickboxing</td>
+              <td><span class="badge badge-alt">Alternate · Unpaid</span></td>
+            </tr>
+            <tr>
+              <td class="date">Nov 1, 2025</td>
+              <td><a href="https://www.tapology.com/fightcenter/events/134897-night-of-knockouts-xxxvi" target="_blank">Night of Knockouts XXXVI</a></td>
+              <td class="sport">Boxing</td>
+              <td><span class="badge badge-alt">Alternate · Unpaid</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-note">
+          ↳ Live record — updated automatically from <a href="https://docs.google.com/spreadsheets/d/1-f-trYbJUcjQpHJx-90Pv3A4IOv9UcSQWF8Fgdjwxg8" target="_blank">Google Sheets</a>
+        </p>
+      </div>
+
+      <div class="section" id="credentials">
+        <div class="section-label">Legal Credentials</div>
+        <div class="cred-item">
+          <div class="cred-bullet"></div>
+          <div class="cred-text"><strong>Attorney at Law</strong> — Licensed in Michigan. Practicing in legal and financial planning since 1998 with Castle Wealth Group. Recognized by the National Association of Distinguished Counsel and National Academy of Elder Law Attorneys. Featured in Forbes, Kiplinger's, and Crain's.</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-bullet"></div>
+          <div class="cred-text"><strong>Objective Analytical Framework</strong> — Legal training demands the same precision, impartiality, and evidence-based evaluation required to accurately score rounds under the 10-point must system.</div>
+        </div>
+        <div class="callout">
+          <p class="callout-text">A legal career built on precision, integrity, and objective evaluation — the same standards I bring to every card I judge.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDE RIGHT COLUMN -->
+    <div class="side-col">
+
+      <div class="section">
+        <div class="section-label">At a Glance</div>
+        <div class="stat-row">
+          <div class="stat-box">
+            <span class="stat-num" id="statEvents">3</span>
+            <span class="stat-label">Events Judged</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">11</span>
+            <span class="stat-label">Years BJJ</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Yrs Fan / Student</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">25+</span>
+            <span class="stat-label">Yrs Legal Career</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Combat Sports</div>
+        <div class="tags">
+          <div class="tag">MMA</div>
+          <div class="tag">Boxing</div>
+          <div class="tag">Kickboxing</div>
+          <div class="tag">Grappling</div>
+          <div class="tag">BJJ</div>
+        </div>
+      </div>
+
+      <div class="section" id="martial-arts">
+        <div class="section-label">Martial Arts Background</div>
+        <div class="cred-item">
+          <div class="cred-bullet"></div>
+          <div class="cred-text"><strong>Brazilian Jiu-Jitsu — Purple Belt</strong><br>11 years of active training. Deep practitioner understanding of submissions, positional control, guard work, and transitions as applied to MMA judging criteria.</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-bullet"></div>
+          <div class="cred-text"><strong>Grappling Partner — UFC Fighters</strong><br>Has trained alongside UFC competitors spanning every weight class, from Heavyweight men's to Strawweight women's, providing elite-level insight into the speed, power, and technique differentials judges must assess.</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Judging Criteria</div>
+        <ul class="criteria-list">
+          <li>Effective striking — volume, accuracy &amp; power</li>
+          <li>Effective grappling &amp; takedowns</li>
+          <li>Aggression &amp; cage / ring control</li>
+          <li>10-Point Must System</li>
+          <li>Unified Rules of MMA</li>
+          <li>ABC Judging Criteria</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Availability</div>
+        <div class="cred-item">
+          <div class="cred-bullet"></div>
+          <div class="cred-text">Based in Brighton, Michigan</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-bullet"></div>
+          <div class="cred-text">Available for regional &amp; national sanctioned events</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-bullet"></div>
+          <div class="cred-text">Boxing, MMA &amp; Kickboxing cards</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-note">References available upon request</div>
+    <div class="footer-mark">C · J · B</div>
+    <div class="footer-note">Updated February 2026</div>
+  </footer>
+
+</div><!-- /page -->
+
+<script>
+  // ── Mobile menu ──
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // ── Dynamic Google Sheets data ──
+  // Uses the public CSV export endpoint — no API key needed if sheet is shared publicly
+  const SHEET_ID = '1-f-trYbJUcjQpHJx-90Pv3A4IOv9UcSQWF8Fgdjwxg8';
+  const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`;
+
+  async function loadJudgingData() {
+    try {
+      const res = await fetch(CSV_URL);
+      if (!res.ok) return; // silently fall back to static data
+
+      const text = await res.text();
+      const rows = text.trim().split('\n').slice(1) // skip header row
+        .map(r => r.split(',').map(c => c.trim().replace(/^"|"$/g, '')))
+        .filter(r => r[0] && r[1] && r[2]); // require date, promotion, sport
+
+      if (rows.length === 0) return;
+
+      const tbody = document.getElementById('judgingBody');
+      tbody.innerHTML = '';
+
+      rows.forEach(row => {
+        const [date, promo, sport, notes] = row;
+        const isOfficial = notes && notes.toLowerCase().includes('paid') && !notes.toLowerCase().includes('unpaid');
+        const isAlternate = notes && notes.toLowerCase().includes('alternate');
+        const badgeClass = isOfficial ? 'badge-official' : 'badge-alt';
+        const badgeText = isOfficial ? 'Official · Paid' : (isAlternate ? 'Alternate · Unpaid' : notes || '—');
+
+        // Detect if promo is a URL
+        const promoCell = promo.startsWith('http')
+          ? `<a href="${promo}" target="_blank" rel="noopener">${extractEventName(promo)}</a>`
+          : promo;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="date">${formatDate(date)}</td>
+          <td>${promoCell}</td>
+          <td class="sport">${sport}</td>
+          <td><span class="badge ${badgeClass}">${badgeText}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Update stat
+      document.getElementById('statEvents').textContent = rows.length;
+
+    } catch (e) {
+      // Silently fail — static fallback remains
+      console.log('Sheet load failed, using static data');
+    }
+  }
+
+  function extractEventName(url) {
+    // Pull readable name from tapology URLs like /events/123-motor-city-cagefights-23
+    try {
+      const parts = new URL(url).pathname.split('/');
+      const slug = parts[parts.length - 1];
+      return slug.replace(/^\d+-/, '').replace(/-/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase());
+    } catch {
+      return url;
+    }
+  }
+
+  function formatDate(d) {
+    // Handle formats like 2-20-2026 or 2026-02-20
+    const parts = d.includes('-') ? d.split('-') : d.split('/');
+    if (parts.length !== 3) return d;
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    // Detect if year is first (ISO) or last (M-D-YYYY)
+    let month, day, year;
+    if (parts[0].length === 4) {
+      [year, month, day] = parts;
+    } else {
+      [month, day, year] = parts;
+    }
+    const m = parseInt(month, 10);
+    return `${months[m - 1]} ${parseInt(day)}, ${year}`;
+  }
+
+  loadJudgingData();
+</script>
+
+
+</body></html>
