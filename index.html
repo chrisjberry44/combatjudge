@@ -29,84 +29,6 @@
     min-height: 100vh;
   }
 
-  /* ─── NAV ─── */
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--ink);
-    border-bottom: 3px solid var(--red);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 32px;
-    height: 54px;
-  }
-
-  .nav-brand {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 3px;
-    color: white;
-  }
-
-  .nav-brand span { color: var(--red); }
-
-  .nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-family: 'Oswald', sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #aaa;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover { color: var(--gold); }
-
-  /* hamburger for mobile */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 4px;
-  }
-  .hamburger span {
-    display: block;
-    width: 24px; height: 2px;
-    background: #aaa;
-    border-radius: 2px;
-    transition: 0.2s;
-  }
-
-  .mobile-menu {
-    display: none;
-    background: #111;
-    border-bottom: 2px solid var(--red);
-    padding: 16px 24px;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .mobile-menu a {
-    font-family: 'Oswald', sans-serif;
-    font-size: 13px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #aaa;
-    text-decoration: none;
-  }
-  .mobile-menu.open { display: flex; }
-
   /* ─── PAGE WRAPPER ─── */
   .page {
     max-width: 980px;
@@ -310,9 +232,6 @@
   }
   .badge-official { background: var(--red); color: white; }
   .badge-alt { background: var(--mid); color: var(--muted); }
-  .badge-loading { background: #ddd; color: #999; animation: pulse 1.2s ease-in-out infinite; }
-
-  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
 
   .table-note {
     font-size: 12px;
@@ -371,7 +290,7 @@
     font-weight: 300;
   }
 
-  /* ─── SIDEBAR SKILLS (tags instead of bars) ─── */
+  /* ─── TAGS ─── */
   .tags {
     display: flex;
     flex-wrap: wrap;
@@ -500,20 +419,9 @@
 
   .love-text p:last-child { margin-bottom: 0; }
 
-  .love-text p strong { color: white; font-weight: 400; }
-
-  @media (max-width: 760px) {
-    .love-section { padding: 40px 22px; }
-    .love-grid {
-      grid-template-columns: 1fr;
-      gap: 28px;
-    }
-    .love-quote { font-size: 28px; }
-  }
-
   /* ─── FOOTER ─── */
   footer {
-    background: var(--ink);
+    background: #080808;
     padding: 16px 40px;
     display: flex;
     align-items: center;
@@ -527,7 +435,7 @@
     font-size: 10.5px;
     font-weight: 300;
     letter-spacing: 2px;
-    color: #666;
+    color: #555;
     text-transform: uppercase;
   }
 
@@ -540,47 +448,28 @@
 
   /* ─── RESPONSIVE ─── */
   @media (max-width: 760px) {
-    nav { padding: 0 18px; }
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-
-    .header {
-      grid-template-columns: 1fr;
-    }
-    .photo-col {
-      height: 260px;
-    }
+    .header { grid-template-columns: 1fr; }
+    .photo-col { height: 260px; }
     .photo-accent { display: none; }
-    .header-text {
-      padding: 24px 22px 22px 22px;
-    }
+    .header-text { padding: 24px 22px 22px 22px; }
     .name { font-size: 46px; }
     .contact-row { gap: 14px; }
 
-    .body {
-      grid-template-columns: 1fr;
-    }
+    .body { grid-template-columns: 1fr; }
     .main-col {
       padding: 28px 22px 32px 22px;
       border-right: none;
       border-bottom: 1px solid var(--mid);
     }
-    .side-col {
-      padding: 28px 22px 32px 22px;
-    }
+    .side-col { padding: 28px 22px 32px 22px; }
 
-    .judging-table td, .judging-table th {
-      padding: 7px 7px;
-      font-size: 12px;
-    }
+    .judging-table td, .judging-table th { padding: 7px 7px; font-size: 12px; }
 
-    footer {
-      padding: 14px 22px;
-      justify-content: center;
-      text-align: center;
-    }
+    .love-section { padding: 40px 22px; }
+    .love-grid { grid-template-columns: 1fr; gap: 28px; }
+    .love-quote { font-size: 28px; }
 
-    .stat-row { grid-template-columns: 1fr 1fr; }
+    footer { padding: 14px 22px; justify-content: center; text-align: center; }
   }
 
   @media (max-width: 480px) {
@@ -594,34 +483,12 @@
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-brand">C<span>.</span>J<span>.</span>Berry</div>
-  <ul class="nav-links">
-    <li><a href="#profile">Profile</a></li>
-    <li><a href="#judging">Judging Record</a></li>
-    <li><a href="#credentials">Credentials</a></li>
-    <li><a href="#martial-arts">Martial Arts</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#profile" onclick="closeMenu()">Profile</a>
-  <a href="#judging" onclick="closeMenu()">Judging Record</a>
-  <a href="#credentials" onclick="closeMenu()">Credentials</a>
-  <a href="#martial-arts" onclick="closeMenu()">Martial Arts</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
-</div>
-
 <div class="page">
 
   <!-- HEADER -->
   <div class="header">
     <div class="photo-col">
-      <img src="https://castlewealthgroup.com/wp-content/uploads/2026/01/headshot-chris-berry.png" alt="Christopher J. Berry">
+      <img src="headshot.png" alt="Christopher J. Berry">
       <div class="photo-accent"></div>
     </div>
     <div class="header-text">
@@ -629,7 +496,7 @@
       <div class="name">Christopher<br><span>J. Berry</span></div>
       <div class="contact-row" id="contact">
         <a class="contact-item" href="tel:2487674784"><div class="dot"></div>248-767-4784</a>
-        <a class="contact-item" href="/cdn-cgi/l/email-protection#ff9c978d968c959d9a8d8d86cbcbbf98929e9693d19c9092"><div class="dot"></div><span class="__cf_email__" data-cfemail="33505b415a4059515641414a070773545e525a5f1d505c5e">[email&#160;protected]</span></a>
+        <a class="contact-item" href="mailto:chrisjberry44@gmail.com"><div class="dot"></div>chrisjberry44@gmail.com</a>
         <a class="contact-item" href="https://docs.google.com/spreadsheets/d/1-f-trYbJUcjQpHJx-90Pv3A4IOv9UcSQWF8Fgdjwxg8" target="_blank"><div class="dot"></div>View Full Record</a>
       </div>
     </div>
@@ -662,7 +529,6 @@
             </tr>
           </thead>
           <tbody id="judgingBody">
-            <!-- Static fallback, replaced by JS if fetch succeeds -->
             <tr>
               <td class="date">Feb 20, 2026</td>
               <td><a href="https://www.tapology.com/fightcenter/events/138181-motor-city-cagefights-23" target="_blank">Motor City Cagefights 23</a></td>
@@ -724,7 +590,7 @@
             <span class="stat-label">Yrs Fan / Student</span>
           </div>
           <div class="stat-box">
-            <span class="stat-num">25+</span>
+            <span class="stat-num">20+</span>
             <span class="stat-label">Yrs Legal Career</span>
           </div>
         </div>
@@ -808,29 +674,20 @@
 
 </div><!-- /page -->
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // ── Mobile menu ──
-  function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-  function closeMenu() {
-    document.getElementById('mobileMenu').classList.remove('open');
-  }
-
+<script>
   // ── Dynamic Google Sheets data ──
-  // Uses the public CSV export endpoint — no API key needed if sheet is shared publicly
   const SHEET_ID = '1-f-trYbJUcjQpHJx-90Pv3A4IOv9UcSQWF8Fgdjwxg8';
   const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`;
 
   async function loadJudgingData() {
     try {
       const res = await fetch(CSV_URL);
-      if (!res.ok) return; // silently fall back to static data
+      if (!res.ok) return;
 
       const text = await res.text();
-      const rows = text.trim().split('\n').slice(1) // skip header row
+      const rows = text.trim().split('\n').slice(1)
         .map(r => r.split(',').map(c => c.trim().replace(/^"|"$/g, '')))
-        .filter(r => r[0] && r[1] && r[2]); // require date, promotion, sport
+        .filter(r => r[0] && r[1] && r[2]);
 
       if (rows.length === 0) return;
 
@@ -844,7 +701,6 @@
         const badgeClass = isOfficial ? 'badge-official' : 'badge-alt';
         const badgeText = isOfficial ? 'Official · Paid' : (isAlternate ? 'Alternate · Unpaid' : notes || '—');
 
-        // Detect if promo is a URL
         const promoCell = promo.startsWith('http')
           ? `<a href="${promo}" target="_blank" rel="noopener">${extractEventName(promo)}</a>`
           : promo;
@@ -859,17 +715,14 @@
         tbody.appendChild(tr);
       });
 
-      // Update stat
       document.getElementById('statEvents').textContent = rows.length;
 
     } catch (e) {
-      // Silently fail — static fallback remains
       console.log('Sheet load failed, using static data');
     }
   }
 
   function extractEventName(url) {
-    // Pull readable name from tapology URLs like /events/123-motor-city-cagefights-23
     try {
       const parts = new URL(url).pathname.split('/');
       const slug = parts[parts.length - 1];
@@ -881,10 +734,20 @@
   }
 
   function formatDate(d) {
-    // Handle formats like 2-20-2026 or 2026-02-20
     const parts = d.includes('-') ? d.split('-') : d.split('/');
     if (parts.length !== 3) return d;
     const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    // Detect if year is first (ISO) or last (M-D-YYYY)
     let month, day, year;
-    if (parts
+    if (parts[0].length === 4) {
+      [year, month, day] = parts;
+    } else {
+      [month, day, year] = parts;
+    }
+    const m = parseInt(month, 10);
+    return `${months[m - 1]} ${parseInt(day)}, ${year}`;
+  }
+
+  loadJudgingData();
+</script>
+</body>
+</html>
