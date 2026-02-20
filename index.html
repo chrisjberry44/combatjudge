@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- saved from url=(0045)file:///Users/chrisberry/Downloads/index.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Christopher J. Berry — Combat Sports Judge</title>
-<meta name="description" content="Christopher J. Berry — Licensed Attorney, BJJ Purple Belt, and Combat Sports Judge for Boxing, MMA &amp; Kickboxing events.">
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link href="./Christopher J. Berry — Combat Sports Judge_files/css2" rel="stylesheet">
+<meta name="description" content="Christopher J. Berry — Licensed Attorney, BJJ Purple Belt, and Combat Sports Judge for Boxing, MMA & Kickboxing events.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -450,6 +450,67 @@
     display: block;
   }
 
+  /* ─── WHY I LOVE JUDGING ─── */
+  .love-section {
+    background: var(--ink);
+    padding: 56px 40px;
+  }
+
+  .love-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .love-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 32px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+  }
+
+  .love-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .love-quote {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    line-height: 1.15;
+    color: white;
+    letter-spacing: 2px;
+    border-left: 4px solid var(--red);
+    padding-left: 20px;
+  }
+
+  .love-text p {
+    font-size: 15.5px;
+    line-height: 1.85;
+    font-weight: 300;
+    color: #bbb;
+    margin-bottom: 18px;
+  }
+
+  .love-text p:last-child { margin-bottom: 0; }
+
+  .love-text p strong { color: white; font-weight: 400; }
+
+  @media (max-width: 760px) {
+    .love-section { padding: 40px 22px; }
+    .love-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .love-quote { font-size: 28px; }
+  }
+
   /* ─── FOOTER ─── */
   footer {
     background: var(--ink);
@@ -533,13 +594,34 @@
 </head>
 <body>
 
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">C<span>.</span>J<span>.</span>Berry</div>
+  <ul class="nav-links">
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#judging">Judging Record</a></li>
+    <li><a href="#credentials">Credentials</a></li>
+    <li><a href="#martial-arts">Martial Arts</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#profile" onclick="closeMenu()">Profile</a>
+  <a href="#judging" onclick="closeMenu()">Judging Record</a>
+  <a href="#credentials" onclick="closeMenu()">Credentials</a>
+  <a href="#martial-arts" onclick="closeMenu()">Martial Arts</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
 
 <div class="page">
 
   <!-- HEADER -->
   <div class="header">
     <div class="photo-col">
-      <img src="headshot.png" alt="Christopher J. Berry">
+      <img src="https://castlewealthgroup.com/wp-content/uploads/2026/01/headshot-chris-berry.png" alt="Christopher J. Berry">
       <div class="photo-accent"></div>
     </div>
     <div class="header-text">
@@ -547,7 +629,7 @@
       <div class="name">Christopher<br><span>J. Berry</span></div>
       <div class="contact-row" id="contact">
         <a class="contact-item" href="tel:2487674784"><div class="dot"></div>248-767-4784</a>
-        <a class="contact-item" href="mailto:chrisjberry44@gmail.com"><div class="dot"></div>chrisjberry44@gmail.com</a>
+        <a class="contact-item" href="/cdn-cgi/l/email-protection#ff9c978d968c959d9a8d8d86cbcbbf98929e9693d19c9092"><div class="dot"></div><span class="__cf_email__" data-cfemail="33505b415a4059515641414a070773545e525a5f1d505c5e">[email&#160;protected]</span></a>
         <a class="contact-item" href="https://docs.google.com/spreadsheets/d/1-f-trYbJUcjQpHJx-90Pv3A4IOv9UcSQWF8Fgdjwxg8" target="_blank"><div class="dot"></div>View Full Record</a>
       </div>
     </div>
@@ -642,7 +724,7 @@
             <span class="stat-label">Yrs Fan / Student</span>
           </div>
           <div class="stat-box">
-            <span class="stat-num">20+</span>
+            <span class="stat-num">25+</span>
             <span class="stat-label">Yrs Legal Career</span>
           </div>
         </div>
@@ -702,6 +784,21 @@
     </div>
   </div>
 
+  <!-- WHY I LOVE JUDGING -->
+  <div class="love-section" id="why">
+    <div class="love-inner">
+      <div class="love-label">Why I Love Judging</div>
+      <div class="love-grid">
+        <div class="love-quote">"Two athletes.<br>One moment.<br>Everything on the line."</div>
+        <div class="love-text">
+          <p>There is something deeply moving about combat sports — the raw honesty of competition at its purest. Two individuals who have sacrificed sleep, social lives, and physical comfort, spending months in a gym perfecting their craft, all for a single night where everything is tested. I have been captivated by that story for over 15 years, and it never gets old.</p>
+          <p>I came to this through jiu-jitsu — eleven years on the mat, competing, grinding, and loving every minute of it. Then came two hip replacements and two dislocations on the same hip. My days as a competitor were over. But my passion for the sport wasn't.</p>
+          <p>Judging gave me a way to stay connected to something I love — to honor the athletes who put in that work by evaluating their performance with the care and precision it deserves. As an attorney, justice and fairness aren't just professional obligations — they are core values. Every fighter deserves a judge who is fully present, deeply knowledgeable, and completely impartial. That is what I bring to every card I sit on.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-note">References available upon request</div>
@@ -711,7 +808,7 @@
 
 </div><!-- /page -->
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── Mobile menu ──
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
@@ -790,17 +887,4 @@
     const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     // Detect if year is first (ISO) or last (M-D-YYYY)
     let month, day, year;
-    if (parts[0].length === 4) {
-      [year, month, day] = parts;
-    } else {
-      [month, day, year] = parts;
-    }
-    const m = parseInt(month, 10);
-    return `${months[m - 1]} ${parseInt(day)}, ${year}`;
-  }
-
-  loadJudgingData();
-</script>
-
-
-</body></html>
+    if (parts
